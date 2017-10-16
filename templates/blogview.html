@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+    
+    
+    <ul style = "list-style-type: none">
+        {% for post in posts %}
+        <h1 align = "center"><a href="/blog?id={{post.id}}">{{post.title}}</a></h1>
+        <li><a href="/blog?id={{post.id}}"><li>{{post.body}}</li></a>
+        {% endfor %}
+    </ul>
+
+
+
+           
+{% endblock %}

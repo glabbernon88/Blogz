@@ -8,11 +8,13 @@
     <p>No posts yet</p>
     {% else %}
 
-        <ul>
+        <ul style="list-style-type:none">
             {% for post in posts %}
-            <a href="/blog?id={{post.id}}"><li>{{post.title}}</li></a>
+            <h2><a href="/blog?id={{post.id}}"><li>{{post.title}}</li></a></h2>
             <li>{{post.body}}</li>
+            <hr>
             {% endfor %}
+        
         </ul>
 
     {% endif %}

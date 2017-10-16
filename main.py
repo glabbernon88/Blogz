@@ -60,7 +60,7 @@ def index():
             new_post = Blogpost(blog_title, blogpost)   #if no errors, the following is executed
             db.session.add(new_post)                    #creates a "staging" of the blogpost entry
             db.session.commit()                         #commits the entry to the database
-
+            
     return render_template('newpost.html')          #returns the newpost template
 
 
