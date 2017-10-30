@@ -112,10 +112,11 @@ def blogpost():
     elif "username" in request.args:
        user_id=request.args['username'] 
        posts = Blogpost.query.filter_by(owner_id=user_id).all()
-       return render_template('blogview.html', title = "Blogz",posts=posts)
+       users = User.query.all()
+       return render_template('blogview.html', title = "Blogz",posts=posts, users=users)
     else:                                                 #if the try statement does not work, this will execute
         posts = Blogpost.query.all()                        # returns a list of all the blogs
-        users = User.query.all()
+        users = User.query.all()                            #returns list of usernames
         return render_template('blogmain.html',title="Blogz", posts = posts, users=users)  #returns template blogmain.html with a list of all blogs
     
 

@@ -7,7 +7,7 @@
         {% for post in posts %}
         <h1>{{post.title}}</h1>
         <li>{{post.body}}</li>
-        <h6>written by <a href="/blog?id={{post.id}}">{{post.owner_id}}</a></h6>
+        <p style ="font-size: 12px"><em>written by </em><a href="/blog?username={{post.owner_id}}">{{users[(post.owner_id-1)].username}}</a></p>
         {% endfor %}
     </ul>
 
