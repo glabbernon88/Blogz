@@ -1,3 +1,4 @@
+<!-- to show the blogs of a single user -->
 {% extends "base.html" %}
 
 {% block content %}
@@ -12,7 +13,7 @@
             {% for post in posts %}    
             <h2><a href="/blog?id={{post.id}}"><li>{{post.title}}</li></a></h2>
             <li>{{post.body}}</li>
-            <h3>written by <a href="/blog?username={{post.owner_id}}">{{users[(post.owner_id-1)].username}}</a></h3>
+            <h3>written by <a href="/blog?id={{post.id}}">{{post.owner_id}}</a></h3>
             <hr>
             {% endfor %}
         

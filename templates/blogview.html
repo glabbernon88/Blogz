@@ -5,8 +5,9 @@
     
     <ul style = "list-style-type: none">
         {% for post in posts %}
-        <h1 align = "center">{{post.title}}</h1>
+        <h1>{{post.title}}</h1>
         <li>{{post.body}}</li>
+        <h6>written by <a href="/blog?id={{post.id}}">{{post.owner_id}}</a></h6>
         {% endfor %}
     </ul>
 

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 align="center">Add a Blog Entry</h1>
+    <h1>new post</h1>
     <form method='post'>
         <table>
             <tr>
-                <td>Title for your new blogpost:</td>
+                <td>title:</td>
             </tr>
             <tr>    
                 <td><input type="text" name='title' value={{title}}></td>
@@ -18,14 +18,14 @@
             </tr>
             
             <tr>
-                <td> Your new blog:</td>
+                <td>post:</td>
             </tr>
             <tr>    
                 <td>
                 <textarea id="txtarea" rows = "4" cols = "50" name='body'>{{body}}</textarea>
                 </td>
         </table>
-        <input type="submit" value='Add entry' />
+        <input type="submit" />
     </form>
 
     

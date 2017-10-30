@@ -7,14 +7,20 @@
                 color: red;
                 font-style: italic;
             }
-            </style>
+            div {
+                padding-left: 150px;
+                padding-right: 130px;
+            }
+        </style>
     </head>
 <body>
 
     <div>
-        <a href='/blog'>Main Blog Page</a>
-        <a href='/newpost'>Add a Blog Entry</a>
-
+        <a href='/index'>home</a>
+        <a href='/blog'>all posts</a>
+        <a href='/newpost'>new post</a>
+        <a href='/login'>login</a>
+        <a href='/logout'>logout</a>
     </div>
 
     {% with messages = get_flashed_messages(with_categories=True) %}
