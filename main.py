@@ -107,8 +107,9 @@ def blogpost():
     if "id" in request.args:                            #id 
         id = request.args['id']         #sets the variable id = requests an item "id" from the dictionary args
         posts = Blogpost.query.filter_by(id=id).first() #set the variable posts to return the id - first one
-        posts = [posts]                         #turns variable posts into a list (for the blogmain template page)         
-        return render_template('blogview.html', title="Blogz" ,posts = posts) #returns the template blogmain.html with blog title and the posts variable value
+        posts = [posts]                         #turns variable posts into a list (for the blogmain template page) 
+        users = User.query.all()        
+        return render_template('blogview.html', title="Blogz" ,posts = posts, users=users) #returns the template blogmain.html with blog title and the posts variable value
     elif "username" in request.args:
        user_id=request.args['username'] 
        posts = Blogpost.query.filter_by(owner_id=user_id).all()
